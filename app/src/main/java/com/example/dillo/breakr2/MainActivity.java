@@ -43,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
     public static int pomodoroSavedSeconds=30;
     public static boolean pomodoroOn=false;
     public static String pomodoroCounter="";
+    public static String timeTillResetCounter="";
     public static ArrayList<String> pomodoroApps = new ArrayList<String>();
     public static final String ACTION_START_SERVICE = "com.example.dillo.breakr2.MonitorService.ACTION_START_SERVICE";
     public static ArrayList<String> appPackages = new ArrayList<>();

@@ -2,6 +2,7 @@ package com.example.dillo.breakr2;
 
 import android.content.Intent;
 import android.os.Build;
+import android.os.Handler;
 import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -13,9 +14,11 @@ import android.view.View;
 import android.widget.TextView;
 import static com.example.dillo.breakr2.MainActivity.appLabels;
 import static com.example.dillo.breakr2.MainActivity.appTimesAllowed;
+import static com.example.dillo.breakr2.MainActivity.pomodoroCounter;
 import static com.example.dillo.breakr2.MainActivity.saveFile;
 import static com.example.dillo.breakr2.MainActivity.appPackages;
 import static com.example.dillo.breakr2.MainActivity.appTimesSpentToday;
+import static com.example.dillo.breakr2.MainActivity.timeTillResetCounter;
 
 public class SetDailyTimeActivity extends AppCompatActivity {
     TimePicker timePicker1;
@@ -49,6 +52,17 @@ public class SetDailyTimeActivity extends AppCompatActivity {
         else {
             textView2.setText("");
         }
+
+        final TextView textView3 = findViewById(R.id.textView3Id);
+        final Handler h = new Handler();
+        final int delay = 1000; //milliseconds
+
+        h.postDelayed(new Runnable() {
+            public void run() {
+                textView3.setText("Time till reset: " + timeTillResetCounter);
+                h.postDelayed(this, delay);
+            }
+        }, delay);
     }
     @RequiresApi(api = Build.VERSION_CODES.M)
     public void saveTime(View v) {

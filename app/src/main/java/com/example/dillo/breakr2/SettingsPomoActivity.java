@@ -52,7 +52,6 @@ public class SettingsPomoActivity extends AppCompatActivity {
                                     long id) {
 
                 String item = ((TextView) view).getText().toString();
-
                 selectedList1(item);
 
             }
@@ -76,11 +75,11 @@ public class SettingsPomoActivity extends AppCompatActivity {
             if (pomodoroApps.contains(item)) {
                 String appPackage = appPackages.get(appLabels.indexOf(item));
                 pomodoroApps.remove(pomodoroApps.indexOf(appPackage));
-                Toast.makeText(getBaseContext(), "Removed " + item, Toast.LENGTH_LONG).show();
+                Toast.makeText(getBaseContext(), "Removed " + item, Toast.LENGTH_SHORT).show();
             } else {
                 String appPackage = appPackages.get(appLabels.indexOf(item));
                 pomodoroApps.add(appPackage);
-                Toast.makeText(getBaseContext(), "Added " + item, Toast.LENGTH_LONG).show();
+                Toast.makeText(getBaseContext(), "Added " + item, Toast.LENGTH_SHORT).show();
             }
 
             adapter1.notifyDataSetChanged();

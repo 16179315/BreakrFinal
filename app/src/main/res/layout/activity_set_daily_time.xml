@@ -9,22 +9,31 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="290dp"
-        android:layout_height="56dp"
-        android:layout_marginStart="52dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="301dp"
+        android:layout_height="64dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
         android:gravity="center_horizontal"
         android:text="Specify Daily Time Usage For this App!"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.512"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TimePicker
         android:id="@+id/timePicker1"
-        android:layout_width="264dp"
+        android:layout_width="wrap_content"
         android:layout_height="226dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="64dp"
         android:timePickerMode="spinner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2"
         tools:targetApi="lollipop" />
@@ -34,7 +43,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="144dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="20dp"
         android:onClick="saveTime"
         android:text="Save Time"
         app:layout_constraintStart_toStartOf="parent"
@@ -42,11 +51,31 @@
 
     <TextView
         android:id="@+id/textViewDetailsId"
-        android:layout_width="wrap_content"
-        android:layout_height="30dp"
-        android:layout_marginBottom="20dp"
+        android:layout_width="233dp"
+        android:layout_height="42dp"
+        android:layout_marginBottom="12dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginStart="16dp"
-        android:text="TextView"
+        android:layout_marginTop="8dp"
+        android:text="You have used pdjskafn alkfjds ksa ds "
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimary"
+        android:textSize="14sp"
         app:layout_constraintBottom_toTopOf="@+id/timePicker1"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.468"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintVertical_bias="0.142" />
+
+    <TextView
+        android:id="@+id/textView3Id"
+        android:layout_width="wrap_content"
+        android:layout_height="42dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="24dp"
+        android:text="Time till reset : 00:00:00"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
 </android.support.constraint.ConstraintLayout>

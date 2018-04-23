@@ -23,6 +23,7 @@
 
         <activity
             android:name=".MainActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -32,6 +33,7 @@
         </activity>
         <activity
             android:name=".PomodoroActivity"
+            android:screenOrientation="portrait"
             android:label="Pomodoro"
             android:parentActivityName=".MainActivity">
             <meta-data
@@ -40,6 +42,7 @@
         </activity>
         <activity
             android:name=".SettingsActivity"
+            android:screenOrientation="portrait"
             android:label="Settings"
             android:parentActivityName=".MainActivity">
             <meta-data
@@ -48,6 +51,7 @@
         </activity>
         <activity
             android:name=".SettingsPomoActivity"
+            android:screenOrientation="portrait"
             android:label="Pomodoro Settings"
             android:parentActivityName=".SettingsActivity">
             <meta-data
@@ -56,9 +60,11 @@
         </activity>
         <activity
             android:name=".BlockActivity"
+            android:screenOrientation="portrait"
             android:label="" />
         <activity
             android:name=".SettingsTimerActivity"
+            android:screenOrientation="portrait"
             android:label="Daily Timer Settings"
             android:parentActivityName=".SettingsActivity">
             <meta-data
@@ -67,6 +73,7 @@
         </activity>
         <activity
             android:name=".HistoryActivity"
+            android:screenOrientation="portrait"
             android:label="History"
             android:parentActivityName=".MainActivity">
             <meta-data
@@ -75,6 +82,7 @@
         </activity>
         <activity
             android:name=".SetPomodoroTimeActivity"
+            android:screenOrientation="portrait"
             android:label="Pomodoro Settings"
             android:parentActivityName=".SettingsPomoActivity">
             <meta-data
@@ -83,6 +91,7 @@
         </activity>
         <activity
             android:name=".HistoryActivityBar"
+            android:screenOrientation="portrait"
             android:label="History"
             android:parentActivityName=".MainActivity">
             <meta-data
@@ -91,14 +100,15 @@
         </activity>
         <activity
             android:name=".ReportBugActivity"
+            android:screenOrientation="portrait"
             android:label="Report a Bug"
             android:parentActivityName=".MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.dillo.breakr2.MainActivity" />
         </activity>
-        <activity android:name=".SetDailyTimeActivity" />
-        <activity android:name=".DailyTimerBlockedActivity"></activity>
+        <activity android:name=".SetDailyTimeActivity" android:screenOrientation="portrait" />
+        <activity android:name=".DailyTimerBlockedActivity" android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>

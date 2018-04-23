@@ -41,7 +41,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="85dp"
+        android:layout_marginBottom="112dp"
         android:onClick="onSettingButtonClicked"
         android:text="Pomodoro Settings"
         app:layout_constraintStart_toStartOf="parent"

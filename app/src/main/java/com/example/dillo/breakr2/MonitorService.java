@@ -32,6 +32,7 @@ import static com.example.dillo.breakr2.MainActivity.pomodoroSeconds;
 import static com.example.dillo.breakr2.MainActivity.pomodoroSavedSeconds;
 import static com.example.dillo.breakr2.MainActivity.pomodoroOn;
 import static com.example.dillo.breakr2.MainActivity.pomodoroCounter;
+import static com.example.dillo.breakr2.MainActivity.timeTillResetCounter;
 import static com.example.dillo.breakr2.MainActivity.pomodoroApps;
 import static com.example.dillo.breakr2.MainActivity.appLabels;
 import static com.example.dillo.breakr2.MainActivity.appPackages;
@@ -50,7 +51,7 @@ public class MonitorService extends Service {
     Runnable runnable;
     Context context = this;
     NotificationChannel channel;
-    int daySeconds= 0;
+    public static int daySeconds= 0;
     int readFileTimer = 180;
     @Override
     public void onCreate() {
@@ -121,8 +122,13 @@ public class MonitorService extends Service {
                                 appTimesSpentToday.add(0);
                                 saveFile();
                             }
-                            daySeconds = 0;
                         }
+
+                        int total = 86400-daySeconds;
+                        int hours = total / 3600;
+                        int minutes = (total % 3600) / 60;
+                        int seconds = total % 60;
+                        timeTillResetCounter = String.format("%02d:%02d:%02d", hours, minutes, seconds);
 
                         //Raed in file every 3 minutes
                         readFileTimer--;
