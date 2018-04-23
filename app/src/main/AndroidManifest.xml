@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.dillo.breakr2">
+
+    <uses-permission android:name="android.permission.REAL_GET_TASKS" />
+    <uses-permission
+        android:name="android.permission.PACKAGE_USAGE_STATS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Breakr"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <service
+            android:name=".MonitorService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".PomodoroActivity"
+            android:label="Pomodoro"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.dillo.breakr2.MainActivity" />
+        </activity>
+        <activity
+            android:name=".SettingsActivity"
+            android:label="Settings"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.dillo.breakr2.MainActivity" />
+        </activity>
+        <activity
+            android:name=".SettingsPomoActivity"
+            android:label="Pomodoro Settings"
+            android:parentActivityName=".SettingsActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.dillo.breakr2.SettingsActivity" />
+        </activity>
+        <activity
+            android:name=".BlockActivity"
+            android:label="" />
+        <activity
+            android:name=".SettingsTimerActivity"
+            android:label="Daily Timer Settings"
+            android:parentActivityName=".SettingsActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.dillo.breakr2.SettingsActivity" />
+        </activity>
+        <activity
+            android:name=".HistoryActivity"
+            android:label="History"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.dillo.breakr2.MainActivity" />
+        </activity>
+        <activity
+            android:name=".SetPomodoroTimeActivity"
+            android:label="Pomodoro Settings"
+            android:parentActivityName=".SettingsPomoActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.dillo.breakr2.SettingsPomoActivity" />
+        </activity>
+        <activity
+            android:name=".HistoryActivityBar"
+            android:label="History"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.dillo.breakr2.MainActivity" />
+        </activity>
+        <activity
+            android:name=".ReportBugActivity"
+            android:label="Report a Bug"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.dillo.breakr2.MainActivity" />
+        </activity>
+        <activity android:name=".SetDailyTimeActivity" />
+        <activity android:name=".DailyTimerBlockedActivity"></activity>
+    </application>
+
+</manifest>

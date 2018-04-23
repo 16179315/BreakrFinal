@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient"
+    tools:context=".MainActivity">
+
+    <ImageButton
+        android:id="@+id/pomobutton"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignTop="@+id/settingsbutton"
+        android:layout_centerHorizontal="true"
+        android:adjustViewBounds="true"
+        android:background="#FFFFFF"
+        android:onClick="launchPomodoro"
+        android:scaleType="center"
+        android:scaleX="2"
+        android:scaleY="2"
+        android:src="@drawable/ic_https_black_24px"
+        tools:layout_editor_absoluteX="96dp"
+        tools:layout_editor_absoluteY="49dp" />
+
+    <ImageButton
+        android:id="@+id/settingsbutton"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="87dp"
+        android:layout_marginEnd="30dp"
+        android:adjustViewBounds="true"
+        android:background="#FFFFFF"
+        android:onClick="launchSettings"
+        android:scaleType="center"
+        android:scaleX="2"
+        android:scaleY="2"
+        android:src="@drawable/ic_settings_black_24px"
+        tools:layout_editor_absoluteX="95dp"
+        tools:layout_editor_absoluteY="212dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="228dp"
+        android:layout_height="136dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        app:srcCompat="@mipmap/ic_breakr" />
+
+    <ImageButton
+        android:id="@+id/historybutton"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/pomobutton"
+        android:layout_marginStart="30dp"
+        android:adjustViewBounds="true"
+        android:background="#FFFFFF"
+        android:onClick="launchHistory"
+        android:scaleType="center"
+        android:scaleX="2"
+        android:scaleY="2"
+        android:src="@drawable/ic_timeline_black_24px" />
+
+
+
+</RelativeLayout>

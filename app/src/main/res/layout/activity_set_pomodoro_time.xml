@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.dillo.breakr2.SetPomodoroTimeActivity">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="305dp"
+        android:layout_height="63dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center_horizontal"
+        android:text="Specify Pomodoro Session Length,\nTraditional Value is 25 minutes"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TimePicker
+        android:id="@+id/timePicker1"
+        android:layout_width="308dp"
+        android:layout_height="263dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="36dp"
+        android:timePickerMode="spinner"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        tools:targetApi="lollipop" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="152dp"
+        android:layout_marginTop="40dp"
+        android:onClick="saveTime"
+        android:text="Save Time"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/timePicker1" />
+</android.support.constraint.ConstraintLayout>

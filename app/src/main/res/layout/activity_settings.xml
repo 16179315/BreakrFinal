@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context=".SettingsActivity">
+
+    <Button
+        android:id="@+id/pombutton"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="326dp"
+        android:layout_height="60dp"
+        android:layout_alignStart="@+id/bugbutton"
+        android:layout_below="@+id/dtbutton"
+        android:gravity="left|center_vertical"
+        android:onClick="launchPomoSettings"
+        android:text="Go To Pomodoro Settings"
+        tools:layout_editor_absoluteX="148dp"
+        tools:layout_editor_absoluteY="42dp" />
+
+    <Button
+        android:id="@+id/dtbutton"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="326dp"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/pombutton"
+        android:gravity="left|center_vertical"
+        android:onClick="launchDTSettings"
+        android:text="Go To Daily Timers"
+        tools:layout_editor_absoluteX="148dp"
+        tools:layout_editor_absoluteY="181dp" />
+
+    <Button
+        android:id="@+id/bugbutton"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="326dp"
+        android:layout_height="60dp"
+        android:layout_below="@+id/pombutton"
+        android:layout_marginStart="16dp"
+        android:layout_toEndOf="@+id/imageButton3"
+        android:gravity="left|center_vertical"
+        android:onClick="launchReportBug"
+        android:text="Send Bug Report" />
+
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:onClick="launchDTSettings"
+        app:srcCompat="@drawable/ic_hourglass_empty_black_24px" />
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/dtbutton"
+        android:onClick="launchPomoSettings"
+        app:srcCompat="@drawable/ic_alarm_black_24px" />
+
+    <ImageButton
+        android:id="@+id/imageButton3"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/pombutton"
+        android:onClick="launchReportBug"
+        app:srcCompat="@drawable/ic_bug_report_black_24px" />
+
+</RelativeLayout>

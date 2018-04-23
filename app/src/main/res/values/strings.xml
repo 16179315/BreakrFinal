@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Breakr2</string>
+    <string-array name="chartsArray">
+        <item>PieChart</item>
+        <item>BarChart</item>
+    </string-array>
+    <string-array name="chartsArrayBar">
+        <item>BarChart</item>
+        <item>PieChart</item>
+    </string-array>
+</resources>
